@@ -1,11 +1,11 @@
 {
-  "name": "bugbot-v3",
+  "name": "Queen-zani-v3",
   "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name UDMODZ",
-    "stop": "pm2 stop UDMODZ",
-    "restart": "pm2 restart UDMODZ"
+    "start": "pm2 start index.js --deep-monitoring --attach --name zani",
+    "stop": "pm2 stop zani",
+    "restart": "pm2 restart zani"
   },
   "keywords": [],
   "author": "",
