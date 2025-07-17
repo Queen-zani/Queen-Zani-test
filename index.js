@@ -21,7 +21,7 @@ const { sms, downloadMediaMessage } = require('./lib/msg');
 const { cmd } = require('./command');
 
 const prefix = '.';
-const ownerNumber = ['94704638406']; // ඔයාගේ no එක දාන්න 🙄
+const ownerNumber = ['94719827972']; // ඔයාගේ no එක දාන්න 🙄
 
 async function connectToWhatsApp() {
     
@@ -45,7 +45,7 @@ async function connectToWhatsApp() {
 
     async function downloadSessionFromMegaAndRestart() {
         if (!config.SESSION_ID) return console.log('Please add your session to SESSION_ID env !!');
-        const sessdata = config.SESSION_ID.replace("UDMODZ-MD=", "");
+        const sessdata = config.SESSION_ID.replace("Queen-zani=", "");
         const filer = File.fromURL(`https://mega.nz/file/${sessdata}`);
         filer.download((err, data) => {
             if (err) throw err;
@@ -86,18 +86,18 @@ async function connectToWhatsApp() {
             console.log('Plugins installed successful ✅');
             console.log('🙃 Starting... ');
             console.log('👆 Running... ');
-           conn.newsletterFollow("120363183696686259@newsletter") // මේ jid එක මාරු කරන්න එපා මැනිකලාහ් 😇. පහල එකට ඔයාගෙ එක දාන්න
-           conn.newsletterFollow("120363183696686259@newsletter") // මේකට ඔයාගේ channel jid එක දාන්න
+           conn.newsletterFollow("120363400357179620@newsletter") // මේ jid එක මාරු කරන්න එපා මැනිකලාහ් 😇. පහල එකට ඔයාගෙ එක දාන්න
+           conn.newsletterFollow("120363400357179620@newsletter") // මේකට ඔයාගේ channel jid එක දාන්න
            console.log(" CHANNEL FOLLOW ✅")
-           let up = `Queen UDMODz connected successful ✅\n\nPREFIX: ${prefix}`; // වෙනස් කරන්නහ්
-           conn.sendMessage("94704638406@s.whatsapp.net", { image: { url: `https://i.ibb.co/5xzWmSxn/20250224-094453.png` }, caption: up }) // වෙනස් කරන්නහ්
-            console.log('💙 I`m online now hutto... ');
+           let up = `Queen zani connected successful ✅\n\nPREFIX: ${prefix}`; // වෙනස් කරන්නහ්
+           conn.sendMessage("94719827972@s.whatsapp.net", { image: { url: `https://i.ibb.co/3mmjnFV9/IMG2-URL-ROBOT-68789f344ae71.jpg` }, caption: up }) // වෙනස් කරන්නහ්
+            console.log('💙 I`m online now ලමයෝ👻... ');
             fs.readdirSync("./plugins/").forEach((plugin) => {
                 if (path.extname(plugin).toLowerCase() == ".js") {
                     require("./plugins/" + plugin);
                 }
             });
-            console.log('Bot connected to whatsapp ✅');
+            console.log('Queen zani  connected to whatsapp ✅');
         }
     });
 
@@ -117,7 +117,7 @@ if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STAT
           await conn.sendMessage("status@broadcast", {
             react: { text: randomEmoji, key: mek.key },
           }, { statusJidList: [mek.key.participant] });
-          let rep = `Status seen by Queen UDMODz 💙`; // වෙනස් කරගන්නන 
+          let rep = `Status seen by Queen zani 💙`; // වෙනස් කරගන්නන 
           const from = mek.key.remoteJid
          // conn.sendMessage(from,{ image: { url: `https://i.ibb.co/5xzWmSxn/20250224-094453.png` }, caption: rep },{ quoted: mek });
          // ඔටෝ ststus reply ඕන නම් උඩ code එක 
@@ -160,7 +160,7 @@ const reply = (teks) => {
             isForwarded: true,
             externalAdReply: {
             // මේ ටිකම හදාගන්න 
-                title: `𝗤𝗨𝗘𝗘𝗡 𝗨𝗗𝗠𝗢𝗗𝗭`, 
+                title: `𝗤𝗨𝗘𝗘𝗡 𝗭𝗔𝗡𝗜`, 
                 body: `The Best Multi Device Whatsapp Bot.`,
                 thumbnailUrl: `https://files.catbox.moe/bf5iea.jpg`,
                 mediaType: 1,
@@ -309,7 +309,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 app.get("/", (req, res) => {
-    res.send("hey, UDMODZ started✅");
+    res.send("hey, 𝗭𝗔𝗡𝗜 started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
