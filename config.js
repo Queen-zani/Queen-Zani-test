@@ -1,19 +1,16 @@
-const fs = require('fs');
-if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false;
+const APIs = {
+  1:'https://apkcombo.com',
+  2:'apk-dl.com',
+  3:'https://apk.support',
+  4:'https://apps.evozi.com/apk-downloader',
+  5:'http://ws75.aptoide.com/api/7',
+  6:"https://cafebazaar.ir"
 }
-module.exports = {
-SESSION_ID: process.env.SESSION_ID || "kvlCGA7B#W0dEyiwD2jYYLxETAptBnL4b7M2DHb_ulYCXZmVPRxE", // session id
-AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true", // true,false
-ANTI_DELETE: process.env.ANTI_DELETE || "true", // true,false
-MODE: process.env.MODE || "public", // public,private,groups,inbox
-ALLWAYS_OFFLINE: process.env.ALLWAYS_OFFLINE || "false", // true,false
-LANG: process.env.LANG || "EN",
+const Proxy = (url)=>(url ? `https://translate.google.com/translate?sl=en&tl=fr&hl=en&u=${encodeURIComponent(url)}&client=webapp`: '')
+
+const api = (ID, path = '/', query = {}) => (ID in APIs ? APIs[ID] : ID) + path + (query ? '?' + new URLSearchParams(Object.entries({...query})) : '')
 
 
-
-
-
-};
+module.exports = { APIs, Proxy, api}
