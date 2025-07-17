@@ -306,7 +306,7 @@ if(body === "send" || body === "Send" || body === "Seve" || body === "Ewpm" || b
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 20050;
 
 app.get("/", (req, res) => {
     res.send("hey, 𝗭𝗔𝗡𝗜 started✅");
